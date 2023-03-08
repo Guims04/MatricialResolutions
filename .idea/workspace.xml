@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e1e1424-4d9d-4fb5-825d-547440f21501" name="Changes" comment="Criando classe Vector">
-      <change afterPath="$PROJECT_DIR$/src/LinearAlgebra.java" afterDir="false" />
+    <list default="true" id="0e1e1424-4d9d-4fb5-825d-547440f21501" name="Changes" comment="Criando classe LinearAlgebra (transpose)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +35,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -92,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678237378651</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Criando classe LinearAlgebra (transpose)">
+      <created>1678238529017</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678238529017</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +118,7 @@
     <MESSAGE value="criando classe matrix (constructor, get, set)" />
     <MESSAGE value="pequena alteração no constructor da Matrix" />
     <MESSAGE value="Criando classe Vector" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando classe Vector" />
+    <MESSAGE value="Criando classe LinearAlgebra (transpose)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando classe LinearAlgebra (transpose)" />
   </component>
 </project>
