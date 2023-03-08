@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e1e1424-4d9d-4fb5-825d-547440f21501" name="Changes" comment="Project template stater">
-      <change afterPath="$PROJECT_DIR$/src/Matrix.java" afterDir="false" />
+    <list default="true" id="0e1e1424-4d9d-4fb5-825d-547440f21501" name="Changes" comment="criando classe matrix (constructor, get, set)">
+      <change afterPath="$PROJECT_DIR$/src/Vector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrix.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678231258966</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="criando classe matrix (constructor, get, set)">
+      <created>1678233697600</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678233697600</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +95,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project template stater" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project template stater" />
+    <MESSAGE value="criando classe matrix (constructor, get, set)" />
+    <option name="LAST_COMMIT_MESSAGE" value="criando classe matrix (constructor, get, set)" />
   </component>
 </project>
