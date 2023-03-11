@@ -1,22 +1,40 @@
 public class Matrix {
-  double[][] matriz;
 
-  public void constructor(int rows, int cols, double[] elements){
-    matriz = new double[rows][cols];
+  // Create the matrix
+  public double[][] constructor(int rows, int cols, double[] elements){
+    double[][] matrix;
+    matrix = new double[rows][cols];
     int p = 0;
     for (int i = 0; i < rows; i++){
       for (int j = 0; j < cols; j++){
-        matriz[i][j] = elements[p];
+        matrix[i][j] = elements[p];
         p++;
       }
     }
+    return matrix;
   }
 
-  public double get(int i, int j){
-    return matriz[i][j];
+  // get the value of the matrix in a determinate position
+  public double get(int i, int j, double[][] m){
+    return m[i][j];
   }
 
-  public void set(int i, int j, double value){
-    matriz[i][j] = value;
+  // Set a new value in matrix
+  public void set(int i, int j, double[][] m, double value){
+    m[i][j] = value;
+  }
+
+  // Show my matrix in terminal
+  public void show(double[][] m){
+    if (m.length > 0){
+      for (int i = 0; i < m.length; i++){
+        for (int j = 0; j < m[0].length; j++){
+          System.out.print(get(i,j,m)+" ");
+        }
+        System.out.println("");
+      }
+    }else {
+      System.out.println("Matriz não existe ou nula");
+    }
   }
 }

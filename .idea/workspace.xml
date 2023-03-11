@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e1e1424-4d9d-4fb5-825d-547440f21501" name="Changes" comment="Criando classe LinearAlgebra (transpose)">
+    <list default="true" id="0e1e1424-4d9d-4fb5-825d-547440f21501" name="Changes" comment="pequenas atualizações">
+      <change afterPath="$PROJECT_DIR$/src/ElementFill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678238529017</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pequenas atualizações">
+      <created>1678316228512</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678316228512</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +129,7 @@
     <MESSAGE value="pequena alteração no constructor da Matrix" />
     <MESSAGE value="Criando classe Vector" />
     <MESSAGE value="Criando classe LinearAlgebra (transpose)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando classe LinearAlgebra (transpose)" />
+    <MESSAGE value="pequenas atualizações" />
+    <option name="LAST_COMMIT_MESSAGE" value="pequenas atualizações" />
   </component>
 </project>
