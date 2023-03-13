@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e1e1424-4d9d-4fb5-825d-547440f21501" name="Changes" comment="testing and performanting the creation of the matrix">
+    <list default="true" id="0e1e1424-4d9d-4fb5-825d-547440f21501" name="Changes" comment="pequenas atualizações e iniciando metodo de soma do LinearAlgebra">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ElementFill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElementFill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinearAlgebra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearAlgebra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrix.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678559867165</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="pequenas atualizações e iniciando metodo de soma do LinearAlgebra">
+      <created>1678666514106</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678666514106</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +143,7 @@
     <MESSAGE value="Criando classe LinearAlgebra (transpose)" />
     <MESSAGE value="pequenas atualizações" />
     <MESSAGE value="testing and performanting the creation of the matrix" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing and performanting the creation of the matrix" />
+    <MESSAGE value="pequenas atualizações e iniciando metodo de soma do LinearAlgebra" />
+    <option name="LAST_COMMIT_MESSAGE" value="pequenas atualizações e iniciando metodo de soma do LinearAlgebra" />
   </component>
 </project>
