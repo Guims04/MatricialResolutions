@@ -2,8 +2,7 @@ public class Matrix {
 
   // Create the matrix
   public double[][] constructor(int rows, int cols, double[] elements){
-    double[][] matrix;
-    matrix = new double[rows][cols];
+    double[][] matrix = new double[rows][cols];
     int p = 0;
     for (int i = 0; i < rows; i++){
       for (int j = 0; j < cols; j++){
@@ -16,12 +15,21 @@ public class Matrix {
 
   // get the value of the matrix in a determinate position
   public double get(int i, int j, double[][] m){
-    return m[i][j];
+    try {
+      return m[i][j];
+    }catch (Exception e){
+      System.out.println("Indice invalido");
+      return 0;
+    }
   }
 
   // Set a new value in matrix
   public void set(int i, int j, double[][] m, double value){
-    m[i][j] = value;
+    try {
+      m[i][j] = value;
+    }catch (Exception e){
+      System.out.println("Indice ou matriz invalida");
+    }
   }
 
   // Show my matrix in terminal

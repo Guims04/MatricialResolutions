@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class ElementFill {
+
+  // method that fill the element variable for the matrix creation
   public double[] fill(int rows, int cols){
     Scanner input = new Scanner(System.in);
     double[] element = new double[rows*cols];
@@ -16,3 +18,11 @@ public class ElementFill {
   }
 
 }
+
+
+
+
+
+
+
+
