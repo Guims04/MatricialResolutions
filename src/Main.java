@@ -48,9 +48,10 @@ public class Main {
     matrix.show(calc.transpose(M2));
 
     // ------------------------------ CALCULATIONS ------------------------------
-    matrix.show(calc.sum(M1,M2));
+//    matrix.show(calc.sum(M1,M2));
 
     System.out.println("Eliminação Gaussiana");
     matrix.show(calc.gauss(M1));
+    calc.solve(M1);
   }
 }

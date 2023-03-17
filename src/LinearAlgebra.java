@@ -31,14 +31,29 @@ public class LinearAlgebra {
     }
   }
 
-  double[][] gauss(double[][] array){
+  double[][] gauss(double[][] a){
     try {
-      GaussJordan example = new GaussJordan(array);
+      GaussJordan example = new GaussJordan(a);
       example.eliminate();
       return example.getMatriz();
     } catch (Exception e){
       System.out.println("Matrizes não existe ou nula");
       return null;
+    }
+  }
+
+  void solve(double[][] a) {
+    SystemEquations verify = new SystemEquations();
+    if (verify.isPossible(a) == true){
+      if (verify.isDeterminated(a) == true){
+        // solve the determined system
+        System.out.println("Sistema Possível Determinado");
+      }else {
+        // solve the indeterminate system
+        System.out.println("Sistema Possível Indeterminado");
+      }
+    }else {
+      System.out.println("Sistema Impossível");
     }
   }
 
