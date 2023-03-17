@@ -24,11 +24,22 @@ public class LinearAlgebra {
             matrix[i][j] = a[i][j]+b[i][j];
           }
         }
+      return matrix;
     }catch (Exception e){
-      System.out.println("Matrizes não são de mesma ordem");
-      System.out.println("Matriz não existe ou nula");
+      System.out.println("Matrizes não são de mesma ordem, não existe ou nula");
+      return null;
     }
-    return matrix;
+  }
+
+  double[][] gauss(double[][] array){
+    try {
+      GaussJordan example = new GaussJordan(array);
+      example.eliminate();
+      return example.getMatriz();
+    } catch (Exception e){
+      System.out.println("Matrizes não existe ou nula");
+      return null;
+    }
   }
 
 }
