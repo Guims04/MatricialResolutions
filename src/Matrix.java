@@ -36,10 +36,11 @@ public class Matrix {
   public void show(double[][] m){
     if (m.length > 0){
       for (int i = 0; i < m.length; i++){
+        System.out.print("| ");
         for (int j = 0; j < m[0].length; j++){
           System.out.print(get(i,j,m)+" ");
         }
-        System.out.println("");
+        System.out.println("|");
       }
     }else {
       System.out.println("Matriz não existe ou nula");

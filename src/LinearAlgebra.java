@@ -42,19 +42,34 @@ public class LinearAlgebra {
     }
   }
 
-  void solve(double[][] a) {
+  double[][] solve(double[][] a) {
     SystemEquations verify = new SystemEquations();
-    if (verify.isPossible(a) == true){
-      if (verify.isDeterminated(a) == true){
-        // solve the determined system
+    double[][] results = new double[a.length][1];
+
+    if (verify.isPossible(a)){
+      if (verify.isDeterminated(a)){
         System.out.println("Sistema Possível Determinado");
+
+        // solve the determined system
+        double z = a[a.length-1][a[0].length-1];
+        results[a.length-1][0] = z;
+        for (int i = 2; i <= a.length; i++){
+          double last = a[a.length-i][a[0].length-1];
+          double func = 0;
+          for (int j = 2; j<=i; j++){
+            func += a[a.length-i][a[0].length-j]*results[a.length-j+1][0];
+          }
+          results[a.length-i][0] = (last-func);
+        }
       }else {
-        // solve the indeterminate system
         System.out.println("Sistema Possível Indeterminado");
+        // solve the indeterminate system
+
       }
     }else {
       System.out.println("Sistema Impossível");
     }
+    return results;
   }
 
 }
