@@ -2,15 +2,19 @@ public class Matrix {
 
   // Create the matrix
   public double[][] constructor(int rows, int cols, double[] elements){
-    double[][] matrix = new double[rows][cols];
-    int p = 0;
-    for (int i = 0; i < rows; i++){
-      for (int j = 0; j < cols; j++){
-        matrix[i][j] = elements[p];
-        p++;
+    try {
+      double[][] matrix = new double[rows][cols];
+      int p = 0;
+      for (int i = 0; i < rows; i++){
+        for (int j = 0; j < cols; j++){
+          matrix[i][j] = elements[p];
+          p++;
+        }
       }
+      return matrix;
+    } catch (Exception e){
+      throw new IllegalArgumentException(e);
     }
-    return matrix;
   }
 
   // get the value of the matrix in a determinate position
@@ -18,8 +22,7 @@ public class Matrix {
     try {
       return m[i][j];
     }catch (Exception e){
-      System.out.println("Indice invalido");
-      return 0;
+      throw new IllegalArgumentException("Indice invalido");
     }
   }
 
@@ -28,7 +31,7 @@ public class Matrix {
     try {
       m[i][j] = value;
     }catch (Exception e){
-      System.out.println("Indice ou matriz invalida");
+      throw new IllegalArgumentException("Indice ou matriz invalida");
     }
   }
 
@@ -43,7 +46,7 @@ public class Matrix {
         System.out.println("|");
       }
     }else {
-      System.out.println("Matriz não existe ou nula");
+      throw new IllegalArgumentException("Matriz não existe ou nula");
     }
   }
   public void show(String[][] m){
@@ -56,7 +59,7 @@ public class Matrix {
         System.out.println("|");
       }
     }else {
-      System.out.println("Matriz não existe ou nula");
+      throw new IllegalArgumentException("Matriz não existe ou nula");
     }
   }
 

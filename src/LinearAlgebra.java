@@ -9,9 +9,7 @@ public class LinearAlgebra {
           matrix[i][j] = a[j][i];
         }
       }
-    }else {
-      System.out.println("Matriz não existe ou nula");
-    }
+    }else { throw new IllegalArgumentException("Matriz não existe ou nula"); }
     return matrix;
   }
 
@@ -25,8 +23,7 @@ public class LinearAlgebra {
         }
       return matrix;
     }catch (Exception e){
-      System.out.println("Matrizes não são de mesma ordem, não existe ou nula");
-      return null;
+      throw new IllegalArgumentException("Matrizes não são de mesma ordem, não existe ou nula");
     }
   }
 
@@ -43,7 +40,7 @@ public class LinearAlgebra {
         }
       }
     }else {
-      System.out.println("Matrizes com ordem diferentes");
+      throw new IllegalArgumentException("Matrizes com ordem diferentes");
     }
 
     return c;
@@ -89,8 +86,7 @@ public class LinearAlgebra {
       example.eliminate();
       return example.getMatriz();
     } catch (Exception e){
-      System.out.println("Matrizes não existe ou nula");
-      return null;
+      throw new IllegalArgumentException("Matrizes não existe ou nula");
     }
   }
 
