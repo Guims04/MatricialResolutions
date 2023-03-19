@@ -22,7 +22,7 @@ public class SystemEquations {
     if (pivotAmount == a[0].length-1) {return true;} else {return false;}
   }
 
-  double[][] solveDeterminate(double[][] a) {
+  String[][] solveDeterminate(double[][] a) {
     double[][] results = new double[a.length][1];
     double z = a[a.length-1][a[0].length-1];
     results[a.length-1][0] = z;
@@ -34,10 +34,20 @@ public class SystemEquations {
       }
       results[a.length-i][0] = (last-func);
     }
-    return results;
+
+    String[][] finalResult = new String[a.length][1];
+
+    for (int i = 0; i<finalResult.length; i++){
+      for (int j = 0; j<finalResult[0].length; j++){
+        finalResult[i][j] = String.valueOf(results[i][j]);
+      }
+    }
+
+    return finalResult;
+
   }
 
-  void solveIndeterminate(double[][] a) {
+  String[][] solveIndeterminate(double[][] a) {
     double[][] coeficientMatrix = new double[a.length][a[0].length-2];
     int independentCol = a[0].length-2;
     for (int col = 0; col < a[0].length; col++){
@@ -72,12 +82,7 @@ public class SystemEquations {
       results[results.length-i-1][0] = (last+"-["+func+"]");
     }
 
-    for (int i = 0; i < results.length; i++){
-      for (int j = 0; j < results[0].length; j++){
-        System.out.print(results[i][j]+" ");
-      }
-      System.out.println("");
-    }
+    return results;
   }
 
 }

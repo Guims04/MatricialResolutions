@@ -62,6 +62,11 @@ public class LinearAlgebra {
     return times(a,b);
   }
 
+  public double[][] dot(double[][] a, double[][] b){
+
+    return a;
+  }
+
   public double[][] gauss(double[][] a){
     try {
       GaussJordan example = new GaussJordan(a);
@@ -73,9 +78,9 @@ public class LinearAlgebra {
     }
   }
 
-  public double[][] solve(double[][] a) {
+  public String[][] solve(double[][] a) {
     SystemEquations verify = new SystemEquations();
-    double[][] results = new double[a.length][1];
+    String[][] results = new String[a.length][1];
 
     if (verify.isPossible(a)){
       if (verify.isDeterminated(a)){
@@ -88,7 +93,7 @@ public class LinearAlgebra {
         System.out.println("Sistema Possível Indeterminado");
 
         // solve the indeterminate system
-        verify.solveIndeterminate(a);
+        results = verify.solveIndeterminate(a);
       }
     }else {
       System.out.println("Sistema Impossível");
