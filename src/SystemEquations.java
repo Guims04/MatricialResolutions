@@ -22,6 +22,64 @@ public class SystemEquations {
     if (pivotAmount == a[0].length-1) {return true;} else {return false;}
   }
 
+  double[][] solveDeterminate(double[][] a) {
+    double[][] results = new double[a.length][1];
+    double z = a[a.length-1][a[0].length-1];
+    results[a.length-1][0] = z;
+    for (int i = 2; i <= a.length; i++){
+      double last = a[a.length-i][a[0].length-1];
+      double func = 0;
+      for (int j = 2; j<=i; j++){
+        func += a[a.length-i][a[0].length-j]*results[a.length-j+1][0];
+      }
+      results[a.length-i][0] = (last-func);
+    }
+    return results;
+  }
+
+  void solveIndeterminate(double[][] a) {
+    double[][] coeficientMatrix = new double[a.length][a[0].length-2];
+    int independentCol = a[0].length-2;
+    for (int col = 0; col < a[0].length; col++){
+      int zerosInCol = 0;
+      for (int row = 0; row < a.length; row++){
+        if (a[row][col] == 0) zerosInCol++;
+        if (zerosInCol == a.length) independentCol = col;
+      }
+    }
+
+    int colum = 0;
+    for (int row = 0; row<a.length; row++){
+      for (int col = 0; col < a[0].length; col++){
+        if (col != independentCol && col != a[0].length-1){
+          coeficientMatrix[row][colum] =  a[row][col];
+          colum++;
+          if (colum == coeficientMatrix[0].length){
+            colum = 0;
+          }
+        }
+      }
+    }
+
+    String[][] results = new String[a[0].length-1][1];
+    results[results.length-1][0] = "i";
+    for (int i = 1; i <= a.length; i++){
+      String last = String.valueOf(a[a.length-i][a[0].length-1]);
+      String func = "";
+      for (int j = 2; j<=i+1; j++){
+        func += "-("+a[a.length-i][a[0].length-j]+"*"+results[a.length-j+2][0]+")";
+      }
+      results[results.length-i-1][0] = (last+"-["+func+"]");
+    }
+
+    for (int i = 0; i < results.length; i++){
+      for (int j = 0; j < results[0].length; j++){
+        System.out.print(results[i][j]+" ");
+      }
+      System.out.println("");
+    }
+  }
+
 }
 
 

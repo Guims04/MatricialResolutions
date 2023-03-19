@@ -46,4 +46,15 @@ public class Matrix {
       System.out.println("Matriz não existe ou nula");
     }
   }
+
+  public void toString(String[][] a) {
+    String text = "";
+    for (int i=0; i<a.length; i++) {
+      System.out.print("| ");
+      for (int j=0; j<a[i].length; j++) {
+        System.out.print(a[i][j]+" ");
+      }
+      System.out.print("|");
+    }
+  }
 }

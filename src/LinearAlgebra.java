@@ -15,7 +15,6 @@ public class LinearAlgebra {
     return matrix;
   }
 
-  // inicio do sum nn terminei
   public double[][] sum(double[][] a, double[][] b){
     double[][] matrix = new double[a.length][a[0].length];
     try {
@@ -31,7 +30,39 @@ public class LinearAlgebra {
     }
   }
 
-  double[][] gauss(double[][] a){
+  public double[][] times(double[][] a, double[][] b) {
+
+    // Creating the final result matrix
+    double c[][] = new double[b.length][b[0].length];
+
+    if (a.length == b.length && a[0].length == b[0].length){
+      // Multiplying element by element
+      for(int i = 0; i < b.length; i++){
+        for(int j = 0; j < b[0].length; j++){
+            c[i][j]=a[i][j]*b[i][j];
+        }
+      }
+    }else {
+      System.out.println("Matrizes com ordem diferentes");
+    }
+
+    return c;
+  }
+
+  public double[][] times(double value, double[][] b) {
+
+    // creating matrix "a" in a matrix with the same order of "b"
+    double[][] a = new double[b.length][b[0].length];
+    for (int i = 0; i < a.length; i++){
+      for (int j = 0; j < a[0].length; j++){
+        a[i][j] = value;
+      }
+    }
+
+    return times(a,b);
+  }
+
+  public double[][] gauss(double[][] a){
     try {
       GaussJordan example = new GaussJordan(a);
       example.eliminate();
@@ -42,7 +73,7 @@ public class LinearAlgebra {
     }
   }
 
-  double[][] solve(double[][] a) {
+  public double[][] solve(double[][] a) {
     SystemEquations verify = new SystemEquations();
     double[][] results = new double[a.length][1];
 
@@ -51,20 +82,13 @@ public class LinearAlgebra {
         System.out.println("Sistema Possível Determinado");
 
         // solve the determined system
-        double z = a[a.length-1][a[0].length-1];
-        results[a.length-1][0] = z;
-        for (int i = 2; i <= a.length; i++){
-          double last = a[a.length-i][a[0].length-1];
-          double func = 0;
-          for (int j = 2; j<=i; j++){
-            func += a[a.length-i][a[0].length-j]*results[a.length-j+1][0];
-          }
-          results[a.length-i][0] = (last-func);
-        }
+        results = verify.solveDeterminate(a);
+
       }else {
         System.out.println("Sistema Possível Indeterminado");
-        // solve the indeterminate system
 
+        // solve the indeterminate system
+        verify.solveIndeterminate(a);
       }
     }else {
       System.out.println("Sistema Impossível");
