@@ -64,7 +64,23 @@ public class LinearAlgebra {
 
   public double[][] dot(double[][] a, double[][] b){
 
-    return a;
+      if (a[0].length != b.length) {
+        throw new IllegalArgumentException("Número de colunas da primeira matriz deve ser igual ao número de linhas da segunda matriz.");
+      }
+
+      double[][] result = new double[a.length][b[0].length];
+
+      for (int i = 0; i < a.length; i++) {
+        for (int j = 0; j < b[0].length; j++) {
+          int sum = 0;
+          for (int k = 0; k < a[0].length; k++) {
+            sum += a[i][k] * b[k][j];
+          }
+          result[i][j] = sum;
+        }
+      }
+
+    return result;
   }
 
   public double[][] gauss(double[][] a){
@@ -79,6 +95,7 @@ public class LinearAlgebra {
   }
 
   public String[][] solve(double[][] a) {
+    a = gauss(a);
     SystemEquations verify = new SystemEquations();
     String[][] results = new String[a.length][1];
 
