@@ -1,3 +1,5 @@
+package libs;
+
 public class LinearAlgebra {
 
   // Make the transpose of the matrix
@@ -91,7 +93,6 @@ public class LinearAlgebra {
   }
 
   public String[][] solve(double[][] a) {
-    a = gauss(a);
     SystemEquations verify = new SystemEquations();
     String[][] results = new String[a.length][1];
 

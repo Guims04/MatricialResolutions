@@ -1,5 +1,7 @@
+package libs;
+
 /**
- * A GaussJordan object holds a two dimensional array representing a matrix
+ * A libs.GaussJordan object holds a two dimensional array representing a matrix
  * containing a system of equations. Contains methods for performing a
  * Gauss-Jordan Elimination and putting a matrix into Reduced Row Echelon Form
  *
@@ -11,7 +13,7 @@ public class GaussJordan{
   private double[][] augmentedMatrix;
 
   /**
-   * Constructor for a GaussJordan object. Takes in a two dimensional double
+   * Constructor for a libs.GaussJordan object. Takes in a two dimensional double
    * array holding the matrix.
    *
    * @param matrix A double[][] containing the augmented matrix
@@ -90,7 +92,7 @@ public class GaussJordan{
 //        {1,0,-2,9},
 //        {0,1,1,3}
 //    };
-//    GaussJordan example = new GaussJordan(array1);
+//    libs.GaussJordan example = new libs.GaussJordan(array1);
 //    example.eliminate();
 //    System.out.println(example);
 //  }

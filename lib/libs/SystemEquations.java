@@ -1,3 +1,5 @@
+package libs;
+
 public class SystemEquations {
   boolean isPossible(double[][] a){
     for (int i = 0; i < a.length; i++){

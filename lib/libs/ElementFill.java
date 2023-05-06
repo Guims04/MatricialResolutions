@@ -1,3 +1,5 @@
+package libs;
+
 import java.util.Scanner;
 
 public class ElementFill {

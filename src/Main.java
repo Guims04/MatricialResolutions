@@ -1,3 +1,5 @@
+import libs.*;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,17 +13,17 @@ public class Main {
     int rows, cols;
 
     // ------------------------------ FIRST MATRIX ------------------------------
-    System.out.print("Informe a quantidade de linhas da primeira matrix: ");
-    rows = input.nextInt();
-    System.out.print("Informe a quantidade de colunas da primeira matrix: ");
-    cols = input.nextInt();
+//    System.out.print("Informe a quantidade de linhas da primeira matrix: ");
+//    rows = input.nextInt();
+//    System.out.print("Informe a quantidade de colunas da primeira matrix: ");
+//    cols = input.nextInt();
+//
+//    double[] element1;
+//    element1 = element.fill(rows, cols);
 
-    double[] element1;
-    element1 = element.fill(rows, cols);
-
-    double[][] M1;
-    M1 = matrix.constructor(rows, cols, element1);
-    matrix.show(M1);
+//    double[][] M1;
+//    M1 = matrix.constructor(rows, cols, element1);
+//    matrix.show(M1);
 
     /*
     System.out.println(matrix.get(0,0, M1));
@@ -45,25 +47,30 @@ public class Main {
 //    };
     // IMPOSSÍVEL
 //    double[][] M1 = {
-//        {2,3,5},
-//        {0,0,1}
+//        {1,2,3},
+//        {0,1}
 //    };
+    double[][] M1 = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
 
-//    matrix.show(calc.gauss(M1));
-//    matrix.show(calc.solve(M1));
+    matrix.show(calc.gauss(M1));
+    matrix.show(calc.solve(M1));
 
     // ------------------------------ SECOND MATRIX ------------------------------
-    System.out.print("Informe a quantidade de linhas da primeira matrix: ");
-    rows = input.nextInt();
-    System.out.print("Informe a quantidade de colunas da primeira matrix: ");
-    cols = input.nextInt();
-
-    double[] element2;
-    element2 = element.fill(rows, cols);
-
-    double[][] M2;
-    M2 = matrix.constructor(rows, cols, element2);
-    matrix.show(M2);
+//    System.out.print("Informe a quantidade de linhas da primeira matrix: ");
+//    rows = input.nextInt();
+//    System.out.print("Informe a quantidade de colunas da primeira matrix: ");
+//    cols = input.nextInt();
+//
+//    double[] element2;
+//    element2 = element.fill(rows, cols);
+//
+//    double[][] M2;
+//    M2 = matrix.constructor(rows, cols, element2);
+//    matrix.show(M2);
 
 
 //    System.out.println("transposed matrix");
@@ -78,8 +85,8 @@ public class Main {
 //    System.out.println("Metodo times com 1 numero e 1 matriz");
 //    matrix.show(calc.times(5,M2));
 
-    System.out.println("Metodo dot");
-    matrix.show(calc.dot(M1,M2));
+//    System.out.println("Metodo dot");
+//    matrix.show(calc.dot(M1,M2));
 
   }
 }
