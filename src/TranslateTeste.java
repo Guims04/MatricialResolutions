@@ -14,7 +14,7 @@ public class TranslateTeste {
     int rows;
 
     // Ask the rows
-    System.out.print("Informe a quantidade de linhas do vetor: ");
+    System.out.println("Informe a quantidade de linhas do vetor: ");
     rows = input.nextInt();
     // create the element then use it to create the matrix/vector
     double[] element1 = element.fill(rows, 1);
@@ -23,7 +23,7 @@ public class TranslateTeste {
     translation.translate2D(v1,3,2);
 
     // Ask the rows
-    System.out.print("Informe a quantidade de linhas do vetor: ");
+    System.out.println("Informe a quantidade de linhas do vetor: ");
     rows = input.nextInt();
     // create the element then use it to create the matrix/vector
     double[] element2 = element.fill(rows, 1);
