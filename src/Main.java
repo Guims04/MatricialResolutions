@@ -1,5 +1,3 @@
-import libs.*;
-
 import java.util.Scanner;
 
 public class Main {

@@ -1,5 +1,4 @@
 import LinearTranformation.Translation;
-import libs.*;
 
 import java.util.Scanner;
 
